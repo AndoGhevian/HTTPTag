@@ -1,6 +1,6 @@
 {
   "name": "http-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simplified Writing Of HTTP Message Text",
   "main": "index.js",
   "scripts": {
