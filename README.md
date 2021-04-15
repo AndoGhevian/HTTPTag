@@ -47,9 +47,9 @@ HTTPTag`
 Note that We do not handle exactly the format of **HTTP Messages**, instead we support
 its light-writing, so the comments above considered as valid input.
 
-As Globaly all CR's and LF's before end of a message will be replaced by CRLF's, you need a way
-to also pass this characters **Without Any Modification** to the HTTP message, and maybe also some trailing spaces, for this scenario you need to pass
-them in expressions to template literal:
+As Globaly all CR's and LF's before **end of a message head** will be replaced by CRLF's, you need a way
+to also pass this characters **Without Any Modification** to the HTTP message head section, and maybe also some trailing spaces,
+for this scenario you need to pass them in expressions to template literal:
 ```javascript
 HTTPTag`
     GET / HTTP/1.1
