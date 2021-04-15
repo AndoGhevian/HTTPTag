@@ -1,0 +1,31 @@
+{
+  "name": "http-tag",
+  "version": "1.0.0",
+  "description": "Simplified Writing Of HTTP Raw Text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndoGhevian/HTTPTag.git"
+  },
+  "keywords": [
+    "http",
+    "raw",
+    "text",
+    "tag",
+    "literal",
+    "headers",
+    "body",
+    "CRLF",
+    "CR",
+    "LF"
+  ],
+  "author": "Andranik Ghevondyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndoGhevian/HTTPTag/issues"
+  },
+  "homepage": "https://github.com/AndoGhevian/HTTPTag#readme"
+}
