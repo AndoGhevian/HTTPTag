@@ -53,7 +53,7 @@ for this scenario you need to pass them in expressions to template literal:
 ```javascript
 HTTPTag`
     GET / HTTP/1.1
-    ${'  ' + 'This CR will not be mearged with followed by \n character: \r'}
+    ${'  ' + 'This CR will not be merged with followed by \n character: \r'}
  
 `
 ```

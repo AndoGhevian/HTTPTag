@@ -12,6 +12,7 @@
   },
   "keywords": [
     "http",
+    "message",
     "raw",
     "text",
     "tag",
@@ -20,7 +21,9 @@
     "body",
     "CRLF",
     "CR",
-    "LF"
+    "LF",
+    "request",
+    "response"
   ],
   "author": "Andranik Ghevondyan",
   "license": "ISC",
