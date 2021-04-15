@@ -3,13 +3,13 @@ const CRLFRegex = /\r\n/g
 const CRLF = '\r\n'
 
 /**
- * Manually create spec complient http request text.
- * @returns {string} - String where all global CRLF, CR, LF characters, including trailing spaces
- * replaced (each group) with a single CRLF.
+ * Manually create spec complient (or not) http message texts.
+ * @returns {string} - String where all global CRLF, CR, LF characters before body section,
+ * including trailing spaces, replaced (each group) with a single CRLF.
  * 
- * NOTE: If CRLF comriesed, then CR and LF will not be considered separately.
+ * NOTE: If CRLF already compriesed, then CR and LF will not be considered separately.
  */
-function httpTag(tokens, ...values) {
+function HTTPTag(tokens, ...values) {
     let expectedNewLineOffset = -1
     let bodyStarted = false
     const formated = values.reduce(
@@ -79,4 +79,4 @@ function httpTag(tokens, ...values) {
     }
 }
 
-module.exports = httpTag
+module.exports = HTTPTag

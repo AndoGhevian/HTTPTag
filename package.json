@@ -1,7 +1,7 @@
 {
   "name": "http-tag",
   "version": "1.0.0",
-  "description": "Simplified Writing Of HTTP Raw Text",
+  "description": "Simplified Writing Of HTTP Message Text",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
