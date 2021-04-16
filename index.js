@@ -2,14 +2,25 @@ const CRLFReplacerRegex = /( *\r\n *)|( *\r *)|( *\n *)/g
 const CRLFRegex = /\r\n/g
 const CRLF = '\r\n'
 
+const syntaxErrorMsg = `
+Invalid Escape Sequence encountered.
+
+For Details About Escape Sequencies in Template Literals See - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates_and_escape_sequences
+`
+
 /**
  * Manually create spec complient (or not) http message texts.
  * @returns {string} - String where all global CRLF, CR, LF characters before body section,
- * including trailing spaces, replaced (each group) with a single CRLF.
+ * including trailing spaces, replaced (each group) with CRLF's.
  * 
- * NOTE: If CRLF already compriesed, then CR and LF will not be considered separately.
+ * If CRLF already compriesed, then CR and LF will not be considered separately.
+ * 
+ * NOTE: If invalid escape sequence encountered SyntaxError will be thrown.
  */
 function HTTPTag(tokens, ...values) {
+    const hasInvalidEscapeSequence = tokens.some(token => token === undefined)
+    if (hasInvalidEscapeSequence) throw new SyntaxError(syntaxErrorMsg)
+
     let expectedNewLineOffset = -1
     let bodyStarted = false
     const formated = values.reduce(
